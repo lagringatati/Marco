@@ -16,9 +16,11 @@ class ActionProvider {
       );
       this.setChatbotMessage(message);
     };
+    
+    /*Selecciono la segunda opcion --> CONTACTAR*/
     handleContactarQuiz = () => {
       const message = this.createChatBotMessage(
-        "Genial! para comunicarte con HostingBook podes llamar al 0358154187966 o hacer click en el siguiente enlace...",
+        "Genial! para comunicarte con HostingBook enviá un whatsapp al 0358154187966 o hacé click en el siguiente enlace...",
         {
           widget: "linkContacto"  
         }
@@ -26,6 +28,7 @@ class ActionProvider {
       this.setChatbotMessage(message);
     };
 
+    /*Selecciono la tercer opcion --> VER REDES*/
     handleRedesQuiz = () => {
         const message = this.createChatBotMessage(
           "Genial! a continuación te dejo los enlaces que te llevarán a las redes sociales de HostingBook", 
@@ -47,7 +50,7 @@ class ActionProvider {
       this.setChatbotMessage(message);
     };
 
-    /*Mensaje para cuando el usuario encuentra algo que no está codeado*/
+    /*Mensaje si el usuario escribe algo que Marco no entiende*/
     handleUnknown = () => {
       const message = this.createChatBotMessage(
         "Lo siento, no puedo entenderte. Quizás te ayude alguna de las siguientes opciones:",
@@ -58,7 +61,7 @@ class ActionProvider {
       this.setChatbotMessage(message);
     };
 
-    /*Mensaje de despedida cuando el usuario pone gracias*/
+    /*Mensaje de despedida cuando el usuario pone "gracias" o "chau"*/
     handleGreeting = () => {
       const message = this.createChatBotMessage(
         "Gracias por hablar conmigo! espero haber sido de ayuda... Hasta la próxima!!!"
@@ -66,7 +69,7 @@ class ActionProvider {
       this.setChatbotMessage(message);
     };
     
-    /*mensaje de bienvenida cuando el usuario escribe "hello" o "hi"*/
+    /*mensaje de bienvenida cuando el usuario escribe "hola" o "buenas"*/
     messageHandler = () => {
       const message = this.createChatBotMessage(
         "Hola!! cómo estás? en este momento sólo puedo ayudarte con las siguientes opciones",
@@ -92,4 +95,3 @@ class ActionProvider {
     };
   }
   export default ActionProvider;
-  

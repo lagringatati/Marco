@@ -1,46 +1,40 @@
 body {
-    background: #343148ff;
+    background: rgb(98, 139, 214);
    /* overflow-y: scroll;*/
   }
-  /*.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #2a2b2dff;
-    color: white;
-  }*/
-  /*.footer {
-    position: fixed;
-    height: 80px;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #2a2b2dff;
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  }*/
+  /*dejar el de develop*/
   .App {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     text-align: center;
     box-sizing: border-box;
   }
+  /*ver tambien los de develop*/
+  button {
+    font-size: 0.99rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    background: transparent;
+    border-color:#28334aff;
+    padding: 0.4em;
+    margin: 0.4em;
+    cursor: pointer;
+    border-radius: 10px;
+  }
 
+  /*fondo donde está el chat y las opciones*/
   .react-chatbot-kit-chat-message-container {
     background: rgb(234, 235, 238);
-    /*background-color: rgb(29, 190, 181);*/
     overflow-y: scroll;
     max-width: 300px;
     max-height: 343px;
   }
 
-  .react-chatbot-kit-chat-message-container div p {
+  /*.react-chatbot-kit-chat-message-container div p {
       display: flex;
       flex-direction: column;
-  }
+  }*/
 
+  /*contenedor general del chatbox*/
   .react-chatbot-kit-chat-container{
       max-width: 300px;
       position: absolute;
@@ -49,58 +43,47 @@ body {
       right: 68px;
   }
   
+  /*input ingreso de texto usuario*/
   .react-chatbot-kit-chat-input{
     /*outline: none;*/
     width: 220px;
   }
   
+  /*Borrar el mensaje del input que viene por defecto*/
   .react-chatbot-kit-chat-input::placeholder{
-    /*display: none;*/
     color: white;  
   }
 
-
-  
+  /*burbuja de mensaje de MarcoBot*/
   .react-chatbot-kit-chat-bot-message{
     border-end-end-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 20px;
     margin: 18px 10px 0px 10px;
-    background-color:  rgb(29, 190, 181);    
   }
 
+  /*letra de burbuja de mensaje de MarcoBot*/
   .react-chatbot-kit-chat-bot-message span{
     color: rgb(255, 255, 255);
   }
   
+  /*contenedor de avatar y mensaje de chat*/
   .react-chatbot-kit-chat-bot-message-container{    
     display: inline-flex;
     justify-content: flex-start;
     max-width: inherit;
     margin-left: 8px;
-    /*display: flex;
-    justify-content: flex-end;
-    background-color: rgb(30, 100, 100);
-    max-width: inherit;
-    border-end-end-radius: 20px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    margin: 7px 10px;*/
   }
 
+  /*contenedor de avatar y mensaje de usuario*/
   .react-chatbot-kit-user-chat-message-container{
     display: flex;
     justify-content: flex-end;
     max-width: inherit;
     margin-right: 8px;
-    /*background-color: rgb(30, 100, 100);*/
-    /*max-width: inherit;
-    border-end-end-radius: 20px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    margin: 7px 10px;*/
   }
 
+  /*burbuja de mensaje de usuario*/
   .react-chatbot-kit-user-chat-message{
     border-end-end-radius: 10px;
     border-top-left-radius: 10px;
@@ -113,33 +96,33 @@ body {
     color: rgb(0, 0, 0); 
     }
    
-  /*bot button on homepage that cam toggle*/
+  /*boton fijo de MarcoBot (toggle)*/
   .app-chatbot-button {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    background-color: rgb(29, 190, 181);
+    background-color: rgb(40, 51, 74);
     border: none;
     position: fixed;
     bottom: 45px;
     z-index: 9999;
     right: 40px;
   }
+
+  /*icono dentro del boton toggle*/
   .app-chatbot-button-icon {
     width: 40px;
     height: 35px;
   }
   
+  /*contenedor boton enviar mensaje*/
   .react-chatbot-kit-chat-input-form{
     display: flex;
-    background: #567572ff;
+    background: /* rgb(29,190,181)*/#567572ff;
   }
 
+  /*boton enviar*/
   .react-chatbot-kit-chat-btn-send{
     width: 36px;
     height: 31px;
-  }
-
-  .react-chatbot-kit-chat-inner-container dic{
-      background-color: tomato;
   }

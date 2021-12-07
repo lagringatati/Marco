@@ -4,7 +4,7 @@ import botavatar from "../../assets/bot.png";
 
 /*ordeno y muestro el avatar de Marco*/
 function BotAvatar() {
-  return <img src={botavatar} className="my-avatar" />;
+  return <img src={botavatar} alt="Avatar de MarcoBot" className="my-avatar" />;
 }
 
 export default BotAvatar;

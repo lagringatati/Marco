@@ -1,21 +1,21 @@
 import React from "react";
 import "../Quiz/Quiz.css";
 
-/*Muestro los botones de las opciones*/
+/*Botones de las opciones grales*/
 function Options(props) {
   const data = [
     {
-      text: "Ver tutorial de HostingBook", /*"Linux",*/
+      text: "Ver tutorial de HostingBook", 
       handler: props.actionProvider.handleTutorialQuiz,
       id: 1
     },
     {
-      text: "Contactar con HostingBook", /*"Docker",*/
+      text: "Contactar con HostingBook", 
       handler: props.actionProvider.handleContactarQuiz,
       id: 2
     },
     {
-      text: "Redes Sociales HostingBook", /*"Sql",*/
+      text: "Redes Sociales HostingBook",
       handler: props.actionProvider.handleRedesQuiz,
       id: 3
     }

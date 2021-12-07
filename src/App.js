@@ -1,7 +1,5 @@
 import "./styles.css";
 import React, { useState } from "react";
-import { GoMarkGithub } from "react-icons/go";
-import { IconContext } from "react-icons";
 import { Chatbot } from "react-chatbot-kit";
 import MessageParser from "./chatbot/MessageParser";
 import config from "./chatbot/config";

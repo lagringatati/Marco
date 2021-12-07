@@ -3,7 +3,6 @@ import { createChatBotMessage } from "react-chatbot-kit";
 import React from "react";
 import BotAvatar from "../Components/BotAvatar/BotAvatar.jsx";
 import Options from "../Components/Options/Options";
-import Quiz from "../Components/Quiz/Quiz";
 import UserAvatar from "../Components/UserAvatar/UserAvatar";
 import LinkList from "../Components/LinkList/LinkList";
 import LinkListTutorial from "../Components/LinkList/LinkListTutorial";
@@ -12,6 +11,7 @@ import LinkListContacto from "../Components/LinkList/LinkListContacto"
 const config = {
     botName: "QuizBot",
     initialMessages: [
+        /*Presentación automática cuando abren el chat con Marco */
         createChatBotMessage(`Hola, soy Marco! y a partir de este momento seré tu asistente virtual`),   /*Saludo de bienvenida de Marco*/
         createChatBotMessage("Puedo ayudarte con las siguientes opciones", {
             withAvatar: false,
@@ -28,16 +28,18 @@ const config = {
             backgroundColor: "#567572ff"
         }
     },
+
     customComponents: {
         header: () => (
-            <div
+            <div    /*Estilos del header del chatbox */
                 style={{
-                    backgroundColor: "#567572ff",
+                    backgroundColor: "rgb(40, 51, 74)",/*"#567572ff",*/
                     padding: "5px",
                     borderTopLeftRadius: "5px",
                     borderTopRightRadius: "5px",
                     display: "flex",
-                    fontSize: "0.85rem",
+                    fontSize: "1rem",
+                    color: "rgb(255, 255, 255)",/*"rgb(29, 190, 181)",*/
                     paddingTop: "12.5px",
                     paddingBottom: "12.5px",
                     paddingRight: "12.5px",
@@ -53,16 +55,13 @@ const config = {
         userAvatar: (props) => <UserAvatar {...props} />
     },
 
-    /*state: {
-        linux: [],
-        sql: [],
-        docker: []
-    },*/
     widgets: [
+        /*OPCIONES / PRIMER MENU*/
         {
             widgetName: "options",
             widgetFunc: (props) => <Options {...props} />
         },
+
         /*REDES SOCIALES*/
         {
             widgetName: "javascriptLinks",
@@ -92,8 +91,8 @@ const config = {
                 ]
             }
         },
-        /*HASTA ACA REDES SOCIALES*/
-        /*Este es el camino al link del tutorial*/
+        
+        /*Camino al link del tutorial*/
         {
             widgetName: "linkTutorial",
             widgetFunc: (props) => <LinkListTutorial {...props} />,
@@ -107,8 +106,8 @@ const config = {
                 ]
             }
         },
-        /*HASTA ACA LINK TUTORIAL*/
-        /*Este es el camino a la pagina de contacto*/
+        
+        /*Camino a la pagina de contacto*/
         {
             widgetName: "linkContacto",
             widgetFunc: (props) => <LinkListContacto {...props} />,
@@ -122,31 +121,6 @@ const config = {
                 ]
             }
         },
-        /*HASTA ACA LINK TUTORIAL*/
-
-
-        /*{
-            widgetName: "linux",
-            widgetFunc: (props) => <Quiz {...props} />,
-            props: {
-                course: "Linux"
-            }
-        },
-        {
-            widgetName: "docker",
-            widgetFunc: (props) => <Quiz {...props} />,
-            props: {
-                course: "Docker"
-            }
-        },
-        {
-            widgetName: "sql",
-            widgetFunc: (props) => <Quiz {...props} />,
-            props: {
-                course: "Sql"
-            }
-        }*/
     ]
 };
-
 export default config;
