@@ -1,12 +1,12 @@
 // Config starter code
 import { createChatBotMessage } from "react-chatbot-kit";
 import React from "react";
-import BotAvatar from "../Components/BotAvatar/BotAvatar.jsx";
-import Options from "../Components/Options/Options";
-import UserAvatar from "../Components/UserAvatar/UserAvatar";
-import LinkList from "../Components/LinkList/LinkList";
-import LinkListTutorial from "../Components/LinkList/LinkListTutorial";
-import LinkListContacto from "../Components/LinkList/LinkListContacto"
+import BotAvatar from "../components/AsistenteVirtual/BotAvatar/BotAvatar.jsx";
+import Options from "../components/AsistenteVirtual/Options/Options.jsx";
+import UserAvatar from "../components/AsistenteVirtual/UserAvatar/UserAvatar.jsx";
+import LinkList from "../components/AsistenteVirtual/LinkList/LinkList.jsx";
+import LinkListTutorial from "../components/AsistenteVirtual/LinkList/LinkListTutorial.jsx";
+import LinkListContacto from "../components/AsistenteVirtual/LinkList/LinkListContacto.jsx"
 
 const config = {
     botName: "QuizBot",

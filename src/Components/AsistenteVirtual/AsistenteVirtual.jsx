@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./AsistenteVirtual.css";
 import React, { useState } from "react";
 import { Chatbot } from "react-chatbot-kit";
 import MessageParser from "./chatbot/MessageParser";
@@ -13,7 +13,7 @@ function AsistenteVirtual() {
     setBot(botState);
   }
   return (
-    <div className="App">
+    <section className="App">
       {showBot && (
         <Chatbot
           config={config}
@@ -24,7 +24,7 @@ function AsistenteVirtual() {
       <button className="app-chatbot-button" onClick={handleBot}>
         <Button className="app-chatbot-button-icon" />
       </button>
-    </div>
+    </section>
   );
 }
 export default AsistenteVirtual;
